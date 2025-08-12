@@ -1,0 +1,26 @@
+[package]
+name = "hf_download"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Download Hugging Face repos over HTTP"
+repository = "https://github.com/maccman/hf-download"
+authors = ["Alex MacCaw <alex@alexmaccaw.com.com>"]
+
+[lib]
+name = "hf_download"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+thiserror = "1"
+futures = "0.3"
+reqwest = { version = "0.12", default-features = false, features = ["http2", "rustls-tls", "stream", "json"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "fs"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+url = "2"
+globset = "0.4"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "macros"] }
