@@ -13,7 +13,7 @@ Add to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-hf_download = { git = "https://github.com/maccman/hf_download.git" }
+hf_download = { git = "https://github.com/maccman/hf-download.git" }
 ```
 
 Or once published:
